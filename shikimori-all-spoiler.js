@@ -1,0 +1,1 @@
+document.addEventListener("mousedown",l=>{if(l.altKey&&l.target.closest(".b-spoiler_block.is-fullwidth, .b-spoiler_block")){let e=document.querySelectorAll(".b-spoiler_block.is-fullwidth, .b-spoiler_block");e.forEach(l=>{l.classList.toggle("is-opened")})}});
