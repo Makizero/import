@@ -1,1 +1,78 @@
-const createSuccessNotification=(e,t,a)=>{let l=document.createElement("div"),n=document.createElement("i");n.classList.add("fa",e),l.appendChild(n),l.style.fontSize="40px",l.style.color=t,l.style.background=a,l.style.borderRadius="4px",l.style.boxShadow="rgba(0, 0, 0, 0.1) 0px 2px 4px",l.style.padding="6px 26px 6px 26px",l.style.bottom="10px",l.style.left="10px",l.style.position="fixed",l.style.zIndex="99999",document.body.appendChild(l),setTimeout(function(){document.body.removeChild(l)},4e3)},clickElementByContent=(e,t)=>{let a=document.querySelectorAll("i[data-alt='5'][class*='"+t+"'], i[title='"+e+"']");return a.length>0&&(a[0].click(),!0)},clickElement=e=>{let t=document.querySelector(e);return!!t&&(t.click(),!0)},mangalibSelector="i.fa.fa-heart-o",translatorSelector="i[data-alt='5']",clickedMangaLib=clickElement("i.fa.fa-heart-o"),clickedTranslator=clickElement("i[data-alt='5']");let clickedReadManga=!1;("readmanga.live"===window.location.hostname||"24.mintmanga.one"===window.location.hostname)&&(clickedReadManga=clickElementByContent("Сказать спасибо переводчику","star-on-png")),clickedMangaLib?createSuccessNotification("fa-heart","var(--red)","var(--button-default-bg)"):(clickedReadManga||clickedTranslator)&&createSuccessNotification("fa-thumbs-up","darkgreen","lightgreen");const wrapSelector="#wrap > div.reader-controller";if("mangalib.me"===window.location.hostname){let e=document.querySelector(".reader-review__right");e&&(e.style.display="none")}else if("readmanga.live"===window.location.hostname||"23.mintmanga.one"===window.location.hostname){let t=wrapSelector+" i.fa.fa-thumbs-up.fa-lg, "+wrapSelector+" span.user-rating",a=document.querySelectorAll(t);for(let l of a)l.style.display="none"}setTimeout(function(){let e=document.getElementById("noty_bottomLeft_layout_container");e&&(e.style.display="none")},250);
+  const createSuccessNotification = (iconClass, fontColor, bgColor) => {
+    const successNotification = document.createElement('div');
+    const icon = document.createElement('i');
+    icon.classList.add('fa', iconClass);
+    successNotification.appendChild(icon);
+    successNotification.style.fontSize = '40px';
+    successNotification.style.color = fontColor;
+    successNotification.style.background = bgColor;
+    successNotification.style.borderRadius = '4px';
+    successNotification.style.boxShadow = 'rgba(0, 0, 0, 0.1) 0px 2px 4px';
+    successNotification.style.padding = '6px 26px 6px 26px';
+    successNotification.style.bottom = '10px';
+    successNotification.style.left = '10px';
+    successNotification.style.position = 'fixed';
+    successNotification.style.zIndex = '99999';
+    document.body.appendChild(successNotification);
+    setTimeout(function() {
+      document.body.removeChild(successNotification);
+    }, 4000);
+  };
+
+  const clickElementByContent = (content, pattern) => {
+    const elements = document.querySelectorAll("i[data-alt='5'][class*='" + pattern + "'], i[title='" + content + "']");
+    if (elements.length > 0) {
+      elements[0].click();
+      return true;
+    }
+    return false;
+  };
+
+  const clickElement = (selector) => {
+    const element = document.querySelector(selector);
+    if (element) {
+      element.click();
+      return true;
+    }
+    return false;
+  };
+
+  const mangalibSelector = "i.fa.fa-heart-o";
+  const translatorSelector = "i[data-alt='5']";
+
+  const clickedMangaLib = clickElement(mangalibSelector);
+  const clickedTranslator = clickElement(translatorSelector);
+
+  let clickedReadManga = false;
+
+  if (window.location.hostname === 'readmanga.live' || window.location.hostname === '24.mintmanga.one') {
+    clickedReadManga = clickElementByContent("Сказать спасибо переводчику", "star-on-png");
+  }
+
+  if (clickedMangaLib) {
+    createSuccessNotification('fa-heart', 'var(--red)', 'var(--button-default-bg)');
+  } else if (clickedReadManga || clickedTranslator) {
+    createSuccessNotification('fa-thumbs-up', 'darkgreen', 'lightgreen');
+  }
+
+  const wrapSelector = '#wrap > div.reader-controller';
+
+  if (window.location.hostname === 'mangalib.me') {
+    const ratingStSelector = '.reader-review__right';
+    const ratingStElement = document.querySelector(ratingStSelector);
+    if (ratingStElement) {
+        ratingStElement.style.display = 'none';
+    }
+  } else if (window.location.hostname === 'readmanga.live' || window.location.hostname === '24.mintmanga.one') {
+    const thumbsUpSelector = wrapSelector + ' i.fa.fa-thumbs-up.fa-lg, ' + wrapSelector + ' span.user-rating';
+    const thumbsUpElements = document.querySelectorAll(thumbsUpSelector);
+    for (const element of thumbsUpElements) {
+        element.style.display = 'none';
+    }
+  }
+  setTimeout(function() {
+    const notyContainer = document.getElementById('noty_bottomLeft_layout_container');
+    if (notyContainer) {
+      notyContainer.style.display = 'none';
+    }
+  }, 250);
