@@ -1,15 +1,16 @@
-    const delayInMilliseconds = 1000;
-    setTimeout(runScript, delayInMilliseconds);
+    let observer = null;
+
     function runScript() {
         const element = document.querySelector('#app > div.page-content > div > div.header-wrap > div.header > div > div.content > h1');
-        element.addEventListener('click', function() {
-            const links = document.querySelectorAll('a[href*="?genres="], a[href*="/search/anime/"]');
-            let genresArray = [];
-            links.forEach(link => {
-                const genre = link.href.split('?genres=')[1] || link.href.split('/').pop();
-                const ignorePatterns = ['top-100', 'trending', 'top-movies'];
-                if (genre && !ignorePatterns.some(pattern => genre.includes(pattern))) {
-                    let formattedGenre = decodeURIComponent(genre);
+        if (element) {
+            element.addEventListener('click', function() {
+                const links = document.querySelectorAll('a[href*="?genres="], a[href*="/search/anime/"]');
+                let genresArray = [];
+                links.forEach(link => {
+                    const genre = link.href.split('?genres=')[1] || link.href.split('/').pop();
+                    const ignorePatterns = ['top-100', 'trending', 'top-movies'];
+                    if (genre && !ignorePatterns.some(pattern => genre.includes(pattern))) {
+                        let formattedGenre = decodeURIComponent(genre);
             formattedGenre = formattedGenre.replace('Cute Girls Doing Cute Things', '[size=0] Cute Girls Doing Cute Things / cgdct [/size] милые девочки умиляют');
             formattedGenre = formattedGenre.replace('Cute Boys Doing Cute Things', '[size=0] Cute Boys Doing Cute Things / cbdct [/size] милые мальчики умиляют');
             formattedGenre = formattedGenre.replace('Achronological Order', '[size=0] Achronological Order [/size] ахронологическое повествование');
@@ -391,35 +392,38 @@
             formattedGenre = formattedGenre.replace('Space [/size] космос Opera', 'Space Opera');
             formattedGenre = formattedGenre.replace('Mahou [size=0] Shoujo [/size] сёдзё', 'Mahou Shoujo');
             formattedGenre = formattedGenre.replace('American [size=0] Football [/size] футбол', 'American Football');
-                    genresArray.push(formattedGenre);
+                        genresArray.push(formattedGenre);
+                    }
+                });
+
+                if (genresArray.length > 0) {
+                    const genresString = genresArray.join(' • ');
+                    const finalString = `\n[size=20]# [/size]${genresString}`;
+                    copyToClipboard(finalString);
+                    const copiedMessage = document.createElement('div');
+                    copiedMessage.innerHTML = 'Теги скопированы: ' + finalString;
+                    copiedMessage.style.background = 'rgb(var(--color-background-200))';
+                    copiedMessage.style.color = 'rgb(var(--color-gray-700))';
+                    copiedMessage.style.padding = '10px';
+                    copiedMessage.style.position = 'fixed';
+                    copiedMessage.style.fontSize = '1.3rem';
+                    copiedMessage.style.borderRadius = '4px';
+                    copiedMessage.style.lineHeight = '1.5';
+                    copiedMessage.style.top = '10px';
+                    copiedMessage.style.left = '50%';
+                    copiedMessage.style.transform = 'translateX(-50%)';
+                    copiedMessage.style.zIndex = '9999';
+                    document.body.appendChild(copiedMessage);
+                    setTimeout(function() {
+                        document.body.removeChild(copiedMessage);
+                    }, 6000);
+                } else {
+                    alert('На этой странице нет тегов');
                 }
             });
-            if (genresArray.length > 0) {
-                const genresString = genresArray.join(' • ');
-                const finalString = `\n[size=20]# [/size]${genresString}`;
-                copyToClipboard(finalString);
-                const copiedMessage = document.createElement('div');
-                copiedMessage.innerHTML = 'Теги скопированы: '+ finalString;
-                copiedMessage.style.background = 'rgb(var(--color-background-200)';
-                copiedMessage.style.color = 'rgb(var(--color-gray-700))';
-                copiedMessage.style.padding = '10px';
-                copiedMessage.style.position = 'fixed';
-                copiedMessage.style.fontSize = '1.3rem';
-                copiedMessage.style.borderRadius = '4px';
-                copiedMessage.style.lineHeight = '1.5';
-                copiedMessage.style.top = '10px';
-                copiedMessage.style.left = '50%';
-                copiedMessage.style.transform = 'translateX(-50%)';
-                copiedMessage.style.zIndex = '9999';
-                document.body.appendChild(copiedMessage);
-                setTimeout(function() {
-                    document.body.removeChild(copiedMessage);
-                }, 6000);
-            } else {
-                alert('На этой странице нет тегов');
-            }
-        });
+        }
     }
+
     function copyToClipboard(text) {
         navigator.clipboard.writeText(text)
             .then(() => {
@@ -429,3 +433,12 @@
                 console.error('Ошибка при копировании в буфер обмена:', error);
             });
     }
+
+    function setupObserver() {
+        observer = new MutationObserver(function(mutationsList, observer) {
+            runScript();
+        });
+        observer.observe(document.documentElement, { childList: true, subtree: true });
+    }
+
+    setupObserver();
