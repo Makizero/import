@@ -1,0 +1,22 @@
+ /* shikimori > user > history > Аниме/Манга/Ранобэ */
+ .history-page a:before
+ { display: inline-block; vertical-align: top; width: 60px }
+ .history-page a[href^="/a"]:before
+ { content: "Аниме "; color: var(--color-primary)!important; }
+ .history-page a[href^="/m"]:before
+ { content: "Манга "; color: var(--color-text-secondary)!important }
+ .history-page a[href^="/r"]:before
+ { content: "Ранобэ "; color: #4f91e8 }
+ [data-locale="en"] .history-page a[href^="/a"]:before
+ { content: "[Anime] " }
+ [data-locale="en"] .history-page a[href^="/m"]:before
+ { content: "[Manga] " }
+ [data-locale="en"].history-page a[href^="/r"]:before
+ { content: "[Ranobe] " }
+ .p-user_history-index .history-page .history-interval p
+ { padding: 0px 0; margin-bottom: 3px; }
+ .p-user_history-index .history-page.block
+ { margin-bottom: .5rem; margin-left: 10%; }
+ /* убрал # в истории */
+ .b-user_history-line .id
+ { display: none; }

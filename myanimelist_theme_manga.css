@@ -1,0 +1,126 @@
+/* Инвертировал логотип */
+.header .header-title
+{ filter: invert(65%) }
+/* Межстрочное расстояние */
+td
+{ line-height: 1em !important }
+/* Увеличил шрифт в MORE */
+.list-table .more-info .more-content
+{ font-size: 14px !important }
+.status-menu-container.fixed
+{ position: sticky; display: block; top: 0 }
+.list-table .list-table-header .header-title.title
+{ width: 20% !important }
+.list-table .list-table-header .header-title.tags
+{ width: 40% !important }
+.list-table .list-table-header .header-title:last-child
+{ width: 10% !important }
+list-menu-float .icon-menu.setting:hover .text .link-list-setting
+{ top: 0px; z-index: 3 }
+/* Ширина статуса тайтла */
+.list-table .list-table-data .data.status
+{ width: 1% !important }
+.list-menu-float .icon-menu.setting:hover .text
+{ z-index: 1 }
+/* Цвет статусов тайтлов */
+.list-table .list-table-data .data.status.reading, .list-table .list-table-data .data.status.watching
+{ background-color: #567c5d !important }
+.list-table .list-table-data .data.status.completed
+{ background-color: #56667c !important }
+.list-table .list-table-data .data.status.dropped
+{ background-color: #7c5656 !important }
+.list-table .list-table-data .data.status.plantoread, .list-table .list-table-data .data.status.plantowatch
+{ background-color: #696969 !important }
+.list-table .list-table-data .data.status.onhold
+{ background-color: #7c7a56 !important }
+/* Колонка названия тайтла */
+.list-table .list-table-data .data.title .link
+{ font-size: 12px !important; font-weight: initial !important; display: block; overflow: hidden; max-height: 1.5em; line-height: 1.5em }
+/* Переименование колонки названия (часть 1).list-table .list-table-data .data.title .link {font-size: 0px !important}*/
+/* Переименование колонки названия (часть 2) .list-table .list-table-data .data.title .link:after {font-size: 9px !important;content: "Go to Page" !important;}*/
+/* Оценка. размер и цвет */
+.list-table .list-table-data .data.score .link
+{ font-size: 20px !important; color: #c4be79 !important }
+/* Ширина колонки тегов */
+.list-table .list-table-header .header-title.tags
+{ padding-left: 150px !important; padding-right: 150px !important }
+/* Размер шрифта колонки тегов */
+.list-table .list-table-data .data.tags
+{ font-size: 12px !important; color: #79a19b !important }
+.list-menu-float
+{ position: inherit; display: -webkit-box }
+.list-table .list-table-header .header-title
+{ height: 6px }
+/* Окно добавления тегов */
+.list-table .list-table-data .tags textarea
+{ min-width: 340px; height: 100px }
+.list-menu-float .icon-menu .text
+{ top: 18px !important }
+/*УДАЛИЛ*/
+#footer-block, .icon-watch, .icon-watch-pv, .icon-watch, .icon-watch-pv, .icon-watch, .icon-watch-pv, .list-table .list-table-data .data.title .rewatching, .list-table .list-table-data .data.title .rereading, .list-table .list-table-data .data.title .content-status, .malicon-streaming:before
+{ display: none !important }
+/* Основной цвет шрифта */
+a, .fa-sort-down:before, .list-table .list-table-header .header-title, #advanced-options, #advanced-options select, #advanced-options .filter-widget.title input[type=text], #advanced-options .sort-widget input[type=radio] + label
+{ text-shadow: 1px 2px 3px #7b0c24 !important; color: #79a4c4 !important }
+/* Побочный цвет шрифта */
+.header, .header .header-title, .list-unit .list-stats, .list-unit .list-status-title .text, .status-menu-container .status-menu .status-button.on, .list-table .list-table-data .tags, .list-table .more-info .more-content, .list-table .list-table-data a:not(.edit-disabled):hover, .list-table .list-table-data .tags .edit:hover
+{ color: #79a19b !important }
+.list-menu-float .icon-menu svg.icon
+{ fill: #595959 !important }
+.list-menu-float .icon-menu
+{ background-color: transparent }
+.header .header-menu .btn-menu
+{ text-shadow: none !important; color: #595959 !important }
+/* Нейтральный цвет (Edit) */
+.list-table .list-table-data .tags .edit, .list-table .list-table-data .data.title .add-edit-more, .list-menu-float .icon-menu:hover .text, .list-table .list-table-data .data
+{ color: #acacb5 !important }
+/* Цвет линий между строк в фильтре */
+#advanced-options, #advanced-options .advanced-options-header, #advanced-options .advanced-options-button
+{ border: #535861 3px solid !important }
+.list-block
+{ margin-top: 0px }
+/* Дополнительный цвет */
+.status-menu-container .status-menu .status-button:after, .list-unit .list-status-title, .list-unit .list-stats, #advanced-options .btn-apply, #advanced-options .btn-clear, #advanced-options .sort-widget input[type=radio]:checked + label, .list-menu-float .icon-menu:not(.profile):hover, .list-menu-float .icon-menu.setting:hover .text .link-list-setting, .list-menu-float .icon-menu.setting:hover .text .link-style-setting
+{ background-color: #56617c !important }
+advanced-options .sort-widget input[type=radio] + label:active
+{ background-color: #b9bfcc !important }
+#advanced-options, .status-menu-container, .status-menu-container .status-menu, .list-table .list-table-header .header-title, #advanced-options .sort-widget input[type=radio] + label
+{ background-color: #535861 !important }
+/* Фон таблиц */
+.list-container
+{ background-repeat: round; background-color: rgb(83 88 97 / 10%) !important; background-size: 35px 8px !important; background-image: repeating-linear-gradient(152deg, rgb(83 88 97 / 40%) 0, rgb(83 88 97 / 30%) 1px, rgb(83 88 97 / 80%) 0, rgb(90, 95, 104) 10%) !important }
+/* Серые, чередующиеся полосы; фон иконок */
+.list-table > tbody:nth-of-type(2n + 1), .icon-menu
+{ background-color: rgb(0 0 0 / 15%) }
+/* Серый фон */
+#advanced-options input[type=text], #advanced-options select, #advanced-options .filter-widget select
+{ background: #666a70 !important }
+/* С обводкой */
+.list-table
+{ border: #535861 3px solid !important }
+/* Без обводки */
+.list-menu-float .icon-menu.setting:hover .text .link-style-setting, .list-menu-float, .list-table .list-table-data .data, .status-menu-container, .list-table .list-table-header .header-title, .list-table .more-info, .list-container, .list-table .list-table-data .data, .status-menu-container, .list-table .list-table-header .header-title, .list-table .more-info, #advanced-options input[type=text], #advanced-options select, #advanced-options .filter-widget select, #advanced-options .sort-widget input[type=radio] + label, #advanced-options .sort-widget input[type=radio]:checked:disabled + label, #advanced-options .sort-widget input[type=radio]:checked + label
+{ border: none !important }
+/* Растянул лист */
+.list-unit, .list-unit .list-stats, .header, .list-unit .list-status-title .text
+{ width: -webkit-fill-available !important }
+.list-container, .status-menu-container, .list-unit .list-status-title
+{ width: inherit !important }
+body.ownlist
+{ font-family: 'Comic Sans MS' !important; font-size: 9px !important; text-shadow: 1px 2px 3px #7b0c24 !important; background: url(https://cdn.discordapp.com/attachments/702401492564443180/1030014993699180595/Claude_Monet_-_La_Pointe_de_la_Heve_at_Low_Tide_-_Google_Art_Project.jpg) no-repeat fixed center top / cover !important; background-blend-mode: soft-light, normal, normal; margin: 0 0 0 0; z-index: 1; margin-top: 0px }
+body:before
+{ content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: linear-gradient(25deg, rgba(0, 0, 0, .3) 5%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, .7) 120%) no-repeat fixed }
+@keyframes snow
+{ 0%
+ { background-position: 0 0, 0 0, 0 0 }
+ to
+ { background-position: 500px 1000px, 400px 400px, 300px 300px } }
+.b-image .normalized_width
+{ max-width: 231px !important; border-radius: 2px !important; opacity: .5 !important }
+body.ownlist, a, .list-table .list-table-data a:not(.edit-disabled), .list-table .list-table-data .tags .edit, .list-table .list-table-data .data.title .add-edit-more, .list-table .list-table-data .data, .list-table .list-table-data .tags .edit, .list-table .list-table-data .data.score .link, .list-table .list-table-data .data.tags
+{ text-decoration: none !important }
+/* Полоса колонок таблицы */
+.list-table .list-table-header .header-title, .list-table .more-info
+{ text-align: center !important; background: none !important }
+.list-table .list-table-data .data.tags
+{ text-align: right !important }

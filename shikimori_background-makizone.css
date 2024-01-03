@@ -1,0 +1,66 @@
+[data-special-bg]::after {
+  content: "";
+  opacity: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: center top / cover no-repeat;
+  background-position: center 50%;
+  z-index: -1;
+}
+[data-special-bg="1"]::after {
+  background-image: url("https://cdn.discordapp.com/attachments/702401492564443180/1108422369170698380/Martin_Rico_y_Ortega_-_Landscape_Study_Waterfall_-_A132_-_Hispanic_Society_of_America.jpg");
+}
+[data-special-bg="2"]::after {
+  background-image: url("https://cdn.discordapp.com/attachments/702401492564443180/1070309070466187315/ART-Ortega_Martin_Rico_y_A_View_Of_Santa_Maria_Della_Salute_Venice-gigapixel-art-scale-2_00x.jpg");
+}
+[data-special-bg="3"]::after {
+  background-image: url("https://cdn.discordapp.com/attachments/702401492564443180/1030005901425397770/Vincent_van_Gogh_-_The_cottage_-_Google_Art_Project.jpg");
+}
+[data-special-bg="4"]::after {
+  background-image: url("https://cdn.discordapp.com/attachments/702401492564443180/1108612586347446293/Martin_Johnson_Heade_-_Marsh_Sunset_Newburyport_Massachusetts_-_2004.1595_-_Museum_of_Fine_Arts.jpg");
+}
+[data-special-bg="5"]::after {
+  background-image: url("https://cdn.discordapp.com/attachments/702401492564443180/966747249281474630/7297d8a4-1301-4536-b3ce-d6a6444c1b80_3000.jpg");
+}
+[data-special-bg="6"]::after {
+  background-image: url("https://cdn.discordapp.com/attachments/702401492564443180/1099396498107666552/Northeaster_-_The_Metropolitan_Museum_of_Art.jpg");
+}
+[data-special-bg="7"]::after {
+  background-image: url("https://cdn.discordapp.com/attachments/702401492564443180/1108421954865725550/William_Bradford_-_Coastal_Rocks_Nahant_A_Sketch_-_2005.1209_-_Museum_of_Fine_Arts.jpg");
+}
+[data-special-bg="8"]::after {
+  background-image: url("https://cdn.discordapp.com/attachments/702401492564443180/1108469616004583585/ART-British_School_-_Mountain_Landscape_-_485162_-_National_Trust-gigapixel-art-scale-2_00x.jpg");
+}
+[data-special-bg="9"]::after {
+  background-image: url("https://cdn.discordapp.com/attachments/702401492564443180/740605121074823178/2017-12-27_3168246.JPG");
+}
+[data-special-bg="10"]::after {
+  background-image: url("https://cdn.discordapp.com/attachments/702401492564443180/1109035233933787156/ART-Pieter_Claesz_Vanitas_Still_Life-gigapixel-art-scale-2_00x.jpg");
+}
+[data-special-bg="11"]::after {
+  background-image: url("https://cdn.discordapp.com/attachments/702401492564443180/1151460046287409202/Nicholas_Chevalier_-_Cook_Strait_New_Zealand_-_Google_Art_Project.jpg");
+}
+[data-special-bg="12"]::after {
+  background-image: url("https://cdn.discordapp.com/attachments/702401492564443180/1151948854636335104/Joseph_Rebell_-_Shipwreck.jpg");
+}
+[data-special-bg="13"]::after {
+  background-image: url("https://cdn.discordapp.com/attachments/702401492564443180/1151948854242050109/2560px-Robert_Russ_-_Helgoland_-_5836_-_Osterreichische_Galerie_Belvedere.jpg");
+}
+[data-special-bg="14"]::after {
+  background-image: url("https://cdn.discordapp.com/attachments/702401492564443180/1019209925253144646/1-fingals-cave-island-of-staffa-scotland-thomas-moran-gigapixel-lines-scale-2_00x.jpg");
+}
+[data-special-bg="15"]::after {
+  background-image: url("https://cdn.discordapp.com/attachments/702401492564443180/1149057712802512936/Theodore_Rousseau_-_The_Great_Oaks_of_Old_Bas-Breau_-_72.87_-_Museum_of_Fine_Arts.jpg");
+}
+[data-special-bg="16"]::after {
+  background-image: url("");
+}
+[data-special-bg="17"]::after {
+  background-image: url("");
+}
+[data-special-bg="18"]::after {
+  background-image: url("");
+}
