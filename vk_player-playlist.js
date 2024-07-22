@@ -1,1 +1,0 @@
-function replaceSelector(){let e=document.querySelectorAll(".mv_box._has_playlist._hide_recomms");e.forEach(e=>{e.classList.remove("_hide_recomms"),e.classList.add("_hide_playlist")})}setInterval(()=>{document.querySelectorAll(".mv_box._has_playlist._hide_recomms").length>0&&replaceSelector()},10)
