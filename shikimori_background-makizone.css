@@ -1,11 +1,11 @@
-[data-special-bg]::after {content: "";opacity: 50%;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: center top / cover no-repeat;background-position: center 50%;z-index: -1;}
-/**/[data-special-bg="1"]::after{background-image:url("https://i.postimg.cc/kGvRWXj8/C4lc9zb3zy_Kqq_RTFj_Qed1Ar_M_UGh_Mgb075Ac_KKos_Xnx_Ff0NRp_Lax_On_ABQOSxh_F1Up_VHUU2F5ioylx6OY9uh_FZh.jpg");}
-/**/[data-special-bg="2"]::after{background-image:url("");}
-/**/[data-special-bg="3"]::after{background-image:url("https://i.postimg.cc/3NF02JL4/jq_Hog33j4Xloa1d_J44PSm6Hslxr_Lt_YEETex_MDy1Ax5c_IE6YVHH_0eq_Hh_Jl8c_O1tjnj_L2IGt_Wg_UYt6q_Omrzz_LTI.jpg");}
-/**/[data-special-bg="4"]::after{background-image:url("https://i.postimg.cc/SRfYcNZc/9VRv9Bo3iu_Yl_Fs_POBrkobxvv_Ihzw_Wau_SSEr4a06t_S_CR7R3Tcxl_Ak_TTv_Xq_BYk_CVFN_5XSFJSw5DYPnl_WE1Yuw_W.jpg");}
-/**/[data-special-bg="5"]::after{background-image:url("https://i.postimg.cc/Hn98bsSg/4a6l_Xzy_LXc_Fw_ye_CJky6ar_e_I4BWp_JTey5W2Bt0n0sx_Aum_E4_yq0A135xno_XTe_KWmu_W1u_Sr_YAOIQbd_f_Da2EIw.jpg");}
-/**/[data-special-bg="6"]::after{background-image:url("");}
-/**/[data-special-bg="7"]::after{background-image:url("https://i.postimg.cc/Y26W5btJ/4w_Zay_I4oxi_Md_EIHe_Zui5MV_q_PSeb_Jxej8ANYEMgt44ptw666_gl3Jj_Sojf_J_0Ievh_JLVu_N_xq_Pm2Lib_Y7eo_Gu6.jpg");}
-/**/[data-special-bg="8"]::after{background-image:url("https://i.postimg.cc/DfrX9B7N/1Hij8e_LKi_Q9myo_UWz_Pn_DXg_Uz_Tw_Z4l6M7Td_LHJzzc_Az_Itq2k_JT0IQX_jl_IUh_XIG7fmbx_Y_l_Rsa_LBZi_MH_JO.jpg");}
-/**/[data-special-bg="9"]::after{background-image:url("");}
-/**/[data-special-bg="10"]::after{background-image:url("");}
+[data-special-bg]::after{content:"";opacity:.5;position:fixed;top:0;left:0;width:100%;height:100%;background:center top/cover no-repeat;background-position:center 50%;z-index:-1}
+/* //shiki.one/clubs/3909-makizone/pages/3141 */[data-special-bg="1"]::after{background-image:url("//shiki.one/system/user_images_h/original/1e9bd668fd722c7d86359077/50f2abc79791dce1e827042498a7b0a93c8ba84ac32aaf58ce37678f44ff9e4e.jpg");}
+/* */[data-special-bg="2"]::after{background-image:url("");}
+/* //shiki.one/clubs/3909-makizone/pages/3463 */[data-special-bg="3"]::after{background-image:url("//shiki.one/system/user_images_h/original/1e9bd668fd722c7d86359077/019fab95deb5ae6ae1cff3f56035c670db9a1e80a48484ba84116b90596e03c8.jpg");}
+/* //shiki.one/clubs/3909-makizone/pages/3140 */[data-special-bg="4"]::after{background-image:url("//shiki.one/system/user_images_h/original/1e9bd668fd722c7d86359077/90e5ecdcfcf71a46a1e297858cc732b3d8cb96b5d5659214b47cab7840fb20b7.jpg");}
+/* //shiki.one/clubs/3909-makizone/pages/3145 */[data-special-bg="5"]::after{background-image:url("https://shiki.one/system/user_images_h/original/1e9bd668fd722c7d86359077/19bb1526887d28a036494699ef212be797502f3df932f2b03872747d5c9c2d66.jpg");}
+/* */[data-special-bg="6"]::after{background-image:url("");}
+/* //shiki.one/clubs/3909-makizone/pages/3461  */[data-special-bg="7"]::after{background-image:url("//shiki.one/system/user_images_h/original/1e9bd668fd722c7d86359077/9ca10eccf67bde06479f9fd0e8c2b45853448a6f5be74b70a723d8524aba0f49.jpg");}
+/* //shiki.one/clubs/3909-makizone/pages/3153 */[data-special-bg="8"]::after{background-image:url("//shiki.one/system/user_images_h/original/1e9bd668fd722c7d86359077/fd1789c3465ab682366e4f0506f35b77fd22bc9c69d8f674cc796303cbd9634d.jpg");}
+/* */[data-special-bg="9"]::after{background-image:url("");}
+/* */[data-special-bg="10"]::after{background-image:url("");}
