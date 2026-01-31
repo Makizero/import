@@ -1,0 +1,45 @@
+/* Панель инструментов */
+.b-shiki_editor-v2 .menubar {
+    background-color: var(--color-menu-background);
+}
+/* Кнопки панели инструментов */
+.b-shiki_editor-v2 .menubar .icon {
+    color: var(--color-text-primary);
+}
+/* Окно восстановления несохраненного текста */
+.b-shiki_editor-v2 .unsaved-content {
+    background-color: var(--color-warning);
+    color: var(--color-background-dialog);
+}
+/* Кнопки в окне восстановления */
+.b-shiki_editor-v2 .unsaved-content .b-button {
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+}
+.b-shiki_editor-v2 .unsaved-content .b-button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-text-on-primary);
+}
+/* Контейнер редактора */
+.b-shiki_editor-v2 .editor-container {
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+}
+/* Состояние загрузки редактора */
+.icon.is-active.is-button, .b-shiki_editor-v2 .editor-container.is-loading {
+    background-color: var(--color-surface);
+} 
+.b-shiki_editor-v2 .editor-container.is-loading:before {
+    background: var(--color-surface);
+    opacity: 0.8;
+}
+/* Область ввода текста */
+.b-shiki_editor-v2 .ProseMirror {
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+    border-color: var(--color-surface);
+}
+.b-shiki_editor-v2 .ProseMirror .b-spoiler_block > span {
+    background-color: var(--color-primary);
+    color: var(--color-text-on-primary);
+}
