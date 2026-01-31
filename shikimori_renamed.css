@@ -1,31 +1,67 @@
-#profiles_show .profile-content .c-column.c-right div:nth-child(1) .subheadline:before,#profiles_friends h2:before,#animes_show  div:nth-child(4) > .subheadline.m5:before {
+@media (max-width: 1311px) {
+    .mylist.mobile-desktop a.b-link[data-id="on_hold"]::before {
+        content: "Брошено " !important;
+    }
+    .mylist.mobile-desktop a.b-link[data-id="dropped"]::before {
+        content: "Корзина " !important;
+    }
+    .mylist.mobile-desktop a.b-link[data-id="on_hold"]::before,
+    .mylist.mobile-desktop a.b-link[data-id="dropped"]::before,
+    .mylist.mobile-desktop a.b-link[data-id="on_hold"] span,
+    .mylist.mobile-desktop a.b-link[data-id="dropped"] span {
+        font-size: 14px !important;
+    }
+    .mylist.mobile-desktop a.b-link[data-id="on_hold"],
+    .mylist.mobile-desktop a.b-link[data-id="dropped"] {
+        font-size: 0 !important;
+    }
+    #user_rates_index .b-options-floated.mylist.mobile-desktop a:nth-child(5):before,
+    #user_rates_index .b-options-floated.mylist.mobile-desktop a:nth-child(6):before {
+        display: inline;
+        justify-content: center;
+        font-family: var(--font-main) !important;
+        font-weight: 700 !important;
+    }
+}
+#animes_show div:nth-child(4) > .subheadline.m5:before,
+#profiles_friends h2:before,
+#profiles_show .profile-content .c-column.c-right div:nth-child(1) .subheadline:before {
     content: "Анимешники";
 }
-#profiles_show .profile-content .c-column.c-right div:nth-child(2) .subheadline:before,#animes_show div:nth-child(6) > .subheadline:before,#animes_clubs .block > h2:before,.menu-dropdown.profile.active a.icon-clubs > span:before,#profiles_clubs h2:before,#clubs_show header a > span:before,#club_pages_show header span:nth-child(1) > a > span:before,#clubs_index header > h1:before,#clubs_index > section > div > div > div:nth-child(3):before{
+#animes_clubs .block > h2:before,
+#animes_show div:nth-child(6) > .subheadline:before,
+#club_pages_show header span:nth-child(1) > a > span:before,
+#clubs_index > section > div > div > div:nth-child(3):before,
+#clubs_index header > h1:before,
+#clubs_show header a > span:before,
+#profiles_clubs h2:before,
+#profiles_show .profile-content .c-column.c-right div:nth-child(2) .subheadline:before,
+.menu-dropdown.profile.active a.icon-clubs > span:before {
     content: "Группы";
 }
 #profiles_show .profile-content .about.block > div:nth-child(2):before {
     content: "Избранное ❤";
     color: var(--color-text-hint);
 }
-.status-3 .subheadline.m5:before,
+.b-add_to_list .status-name[data-text="Отложено"]::before,
+.b-add_to_list.on_hold .edit-trigger .text::before,
 .b-collection-filters [data-value=on_hold]::after,
+.c-history .entry .misc[title="Отложено"]::after,
 .p-profiles-show .profile-head .c-info .b-stats_bar.manga .stat_name[data-type=on_hold] a:after,
 .p-profiles-show .profile-head .c-info .stat_name[data-type=on_hold] a:after,
-.c-history .entry .misc[title="Отложено"]::after,
-.b-add_to_list .status-name[data-text="Отложено"]::before,
-.b-add_to_list.on_hold .edit-trigger .text::before {
-    content: "Брошено" !important;
+.status-3 .subheadline.m5:before {
+    content: "Брошено " !important;
 }
-.status-4 .subheadline.m5:before,
+.b-add_to_list .status-name[data-text="Брошено"]::before,
+.b-add_to_list.dropped .edit-trigger .text::before,
 .b-collection-filters [data-value=dropped]::after,
+.c-history .entry .misc[title="Брошено"]::after,
 .p-profiles-show .profile-head .c-info .b-stats_bar.manga .stat_name[data-type=dropped] a:after,
 .p-profiles-show .profile-head .c-info .stat_name[data-type=dropped] a:after,
-.c-history .entry .misc[title="Брошено"]::after,
-.b-add_to_list .status-name[data-text="Брошено"]::before,
-.b-add_to_list.dropped .edit-trigger .text::before {
-    content: "Корзина" !important;
+.status-4 .subheadline.m5:before {
+    content: "Корзина " !important;
 }
+
 .subheadline.m5:before {
     font-size: initial;
 }
@@ -35,40 +71,68 @@
 .p-profiles .profile-head .c-history .entry .misc {
     line-height: inherit;
 }
-#profiles_show .profile-content .c-column.c-right div:nth-child(1) .subheadline > a,#animes_show div:nth-child(6) > .subheadline > a {
-    margin: -0.625rem -5.68rem;
-    padding: .375rem 3rem;
+#animes_show div:nth-child(6) > .subheadline > a,
+#profiles_show .profile-content .c-column.c-right div:nth-child(1) .subheadline > a {
+    margin: -0.625rem -7.4rem;
+    padding: .375rem 4rem;
 }
-.p-profiles-show .profile-head .c-info .stat_name[data-type=on_hold] a:after,
-.p-profiles-show .profile-head .c-info .stat_name[data-type=dropped] a:after {
+.p-profiles-show .profile-head .c-info .stat_name[data-type=dropped] a:after,
+.p-profiles-show .profile-head .c-info .stat_name[data-type=on_hold] a:after {
     font-size: 10px;
     float: left;
     margin-right: 5px;
 }
-.c-history .entry .misc[title="Отложено"]::after,
-.c-history .entry .misc[title="Брошено"]::after,#clubs_show header a > span:before,#club_pages_show header span:nth-child(1) > a > span:before {
+#club_pages_show header span:nth-child(1) > a > span:before,
+#clubs_show header a > span:before,
+.c-history .entry .misc[title="Брошено"]::after,
+.c-history .entry .misc[title="Отложено"]::after {
     font-size: 12px;
 }
-#profiles_show .profile-content .c-column.c-right div:nth-child(1) .subheadline:before,#profiles_friends h2:before,#animes_show  div:nth-child(4) > .subheadline.m5:before,#animes_clubs .block > h2:before,#profiles_show .profile-content .c-column.c-right div:nth-child(2) .subheadline:before,#profiles_clubs h2:before,#animes_show div:nth-child(6) > .subheadline:before,#profiles_show .profile-content .about.block > div:nth-child(2):before,.b-add_to_list .status-name[data-text="Отложено"]::before,
-.b-add_to_list .status-name[data-text="Брошено"]::before,#clubs_index header > h1:before,#clubs_index div:nth-child(3):before {
+#animes_clubs .block > h2:before,
+#animes_show div:nth-child(4) > .subheadline.m5:before,
+#animes_show div:nth-child(6) > .subheadline:before,
+#clubs_index div:nth-child(3):before,
+#clubs_index header > h1:before,
+#profiles_clubs h2:before,
+#profiles_friends h2:before,
+#profiles_show .profile-content .about.block > div:nth-child(2):before,
+#profiles_show .profile-content .c-column.c-right div:nth-child(1) .subheadline:before,
+#profiles_show .profile-content .c-column.c-right div:nth-child(2) .subheadline:before,
+.b-add_to_list .status-name[data-text="Брошено"]::before,
+.b-add_to_list .status-name[data-text="Отложено"]::before {
     font-size: 14px !important;
 }
-.menu-dropdown.profile.active a.icon-clubs > span:before {
+.menu-dropdown.profile.active a.icon-clubs > span:before,
+.b-collection-filters [data-value=on_hold]::after,
+.b-collection-filters [data-value=dropped]::after {
     font-size: 16px;
 }
 .b-add_to_list.on_hold .edit-trigger .text .status-name,
 .b-add_to_list.dropped .edit-trigger .text .status-name {
     visibility: hidden;
 }
-#profiles_show .profile-content .c-column.c-right div:nth-child(1) .subheadline > a,#profiles_friends h2,#animes_show  div:nth-child(4) > .subheadline.m5,#profiles_show .profile-content .c-column.c-right div:nth-child(2) .subheadline,#animes_show div:nth-child(6) > .subheadline > a,#animes_clubs .block > h2,#profiles_show .profile-content .about.block > div:nth-child(2),.menu-dropdown.profile.active a.icon-clubs > span,#profiles_clubs h2,#clubs_show header a > span,#club_pages_show header span:nth-child(1) > a > span,#clubs_index header > h1,#clubs_index > section > div > div > div:nth-child(3),.status-3 .subheadline.m5,
-.status-4 .subheadline.m5,
+#animes_clubs .block > h2,
+#animes_show div:nth-child(4) > .subheadline.m5,
+#animes_show div:nth-child(6) > .subheadline > a,
+#club_pages_show header span:nth-child(1) > a > span,
+#clubs_index > section > div > div > div:nth-child(3),
+#clubs_index header > h1,
+#clubs_show header a > span,
+#profiles_clubs h2,
+#profiles_friends h2,
+#profiles_show .profile-content .about.block > div:nth-child(2),
+#profiles_show .profile-content .c-column.c-right div:nth-child(1) .subheadline > a,
+#profiles_show .profile-content .c-column.c-right div:nth-child(2) .subheadline,
+.b-add_to_list .status-name[data-text="Брошено"],
+.b-add_to_list .status-name[data-text="Отложено"],
+.c-history .entry .misc[title="Брошено"],
+.c-history .entry .misc[title="Отложено"],
+.menu-dropdown.profile.active a.icon-clubs > span,
 .p-profiles-show .profile-head .c-info .stat_name[data-type=dropped] a,
 .p-profiles-show .profile-head .c-info .stat_name[data-type=on_hold] a,
-li[data-field=mylist][data-value=on_hold],
-li[data-field=mylist][data-value=dropped],
-.c-history .entry .misc[title="Отложено"],
-.c-history .entry .misc[title="Брошено"],
-.b-add_to_list .status-name[data-text="Отложено"],
-.b-add_to_list .status-name[data-text="Брошено"] {
+.status-3 .subheadline.m5,
+.status-4 .subheadline.m5,
+.b-collection-filters [data-value=dropped],
+.b-collection-filters [data-value=on_hold] {
     font-size: 0 !important;
 }
